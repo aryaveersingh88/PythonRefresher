@@ -8,14 +8,16 @@ Created on Sat Dec  1 14:10:14 2018
 from twilio.rest import Client 
 
 # Your Account SID and Auth token from twilio 
-account_sid = "AC098abfc5f8b77ad99229fd05850852f6"
-auth_token = "83bb253ab8475243e49f779ceb4b6e4c"
+account_sid = "" #Add account SID token here 
+auth_token = "" #Add authorization token here 
+
+# Both the above account SID and Auth token available on Twilio Homepage of the application you created 
 
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
         body="Arya's first message!! Wozzaaaa", 
-        to = "+12156054078",
-        from_ = "+16095545450")
+        to = "", #Add the number you want to send the text to 
+        from_ = "") #Add the twilio phone number here 
 
 print(message.sid)
